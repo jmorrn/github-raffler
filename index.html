@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Sorteio GitHub</title>
+  </head>
+  <body
+    class="font-sans bg-gray-100 flex flex-col items-center p-8 h-screen justify-center items-center"
+  >
+    <h1 class="text-gray-800 text-2xl font-bold">Sorteador de GitHub</h1>
+    <p class="text-gray-700 mt-4">
+      Insira os nomes de usuário do GitHub separados por vírgula:
+    </p>
+    <textarea
+      id="usernamesInput"
+      placeholder="Ex: torvalds,octocat,usuario_invalido"
+      class="w-full max-w-lg h-24 mt-4 p-4 rounded-lg border border-gray-300 resize-y"
+    ></textarea>
+    <br />
+    <button
+      onclick="startRaffle()"
+      class="mt-4 px-6 py-3 text-white bg-cyan-600 rounded-full hover:bg-cyan-700"
+    >
+      Sortear
+    </button>
+
+    <div class="results mt-8 text-center" id="results"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
